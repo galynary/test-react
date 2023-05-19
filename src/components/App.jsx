@@ -1,16 +1,11 @@
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Container>
+      <Title>TWEETS</Title>
+      {loading && <Loader />}
+      <FollowersList />
+
+      <ToastContainer autoClose={3000} />
+    </Container>
   );
 };
