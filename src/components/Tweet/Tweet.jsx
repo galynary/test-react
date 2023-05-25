@@ -1,9 +1,7 @@
-import { List, Item, DeleteButton } from './ContactList.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { addFollowers } from 'redux/fellowers/operations';
 import { selectFollowers } from 'redux/fellowers/selectors';
-import { Loader } from 'components/Loader/Loader';
 import { User, Wrapper } from './User.styled';
 
 export const FollowersItem = ({ data }) => {
