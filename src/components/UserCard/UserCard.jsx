@@ -1,13 +1,13 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { addFollowers } from 'redux/fellowers/operations';
-import { selectFollowers } from 'redux/fellowers/selectors';
+import { addFollowers } from 'redux/users/operations';
+import { selectFollowers } from 'redux/users/selectors';
 import { User, Wrapper } from './User.styled';
 
 export const FollowersItem = ({ data }) => {
   const { id, userURL, tweets, followers } = data;
   const dispatch = useDispatch();
-  const follower = useSelector(selectFollowers);
+  const users = useSelector(selectUsers);
 
   useEffect(() => {
     dispatch(fetchFellowers());

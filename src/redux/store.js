@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { contactsReducer } from './fellowers/contactSlice';
-import { filterReducer } from './fellowers/filterSlice';
+import tweetReducer from './users/tweetSlice';
 
-export const store = configureStore({
+const store = configureStore({
   reducer: {
-    contacts: contactsReducer,
-    filter: filterReducer,
+    tweet: tweetReducer,
   },
 });
+
+export default store;
