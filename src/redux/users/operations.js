@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // GET @ /tasks
 export const fetchFollowers = createAsyncThunk(
-  'tasks/fetchAll',
+  'users/fetchAll',
   async (_, thunkAPI) => {
     try {
       const res = await axios.get(`/users?page=${page}&limit=3`);
@@ -16,7 +16,7 @@ export const fetchFollowers = createAsyncThunk(
 
 // POST @ /tasks
 export const addFollowers = createAsyncThunk(
-  'tasks/addTask',
+  'users/addUser',
   async (users, thunkAPI) => {
     try {
       const response = await axios.post('/users', { users });
